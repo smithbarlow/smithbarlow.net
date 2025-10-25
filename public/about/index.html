@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://smithbarlow.net/images/favicon.ico" />
+<title>About | smithbarlow.xyz</title>
+<meta name="title" content="About" />
+<meta name="description" content="Smith Barlow&#39;s About Page" />
+<meta name="author" content="Smith Barlow" />
+<meta name="keywords" content="" />
+
+
+
+
+
+
+  
+  <meta property="og:url" content="https://smithbarlow.net/about/">
+  <meta property="og:site_name" content="smithbarlow.xyz">
+  <meta property="og:title" content="About">
+  <meta property="og:description" content="Smith Barlow&#39;s About Page">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2025-10-24T00:38:44-07:00">
+    <meta property="article:modified_time" content="2025-10-24T00:38:44-07:00">
+
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About">
+  <meta name="twitter:description" content="Smith Barlow&#39;s About Page">
+
+
+  
+  
+  <meta itemprop="name" content="About">
+  <meta itemprop="description" content="Smith Barlow&#39;s About Page">
+  <meta itemprop="datePublished" content="2025-10-24T00:38:44-07:00">
+  <meta itemprop="dateModified" content="2025-10-24T00:38:44-07:00">
+  <meta itemprop="wordCount" content="362">
+
+<meta name="referrer" content="no-referrer" />
+
+  
+  <link href="/original.min.css" rel="stylesheet">
+
+  
+    
+    <link href="/syntax.min.css" rel="stylesheet">
+  
+
+  
+
+  
+</head>
+
+<body>
+  <header><div class="brand">
+  <a class="title" href="/">
+    <div id="logo" aria-hidden="true"></div>
+    <h1 class="site-title">smithbarlow.xyz</h1>
+  </a>
+</div>
+
+
+
+  
+  
+  
+
+  
+
+  <a href="https://smithbarlow.net/">..</a>
+
+
+<nav>
+
+
+
+
+
+</nav>
+</header>
+  <main id="main-content">
+
+<content>
+  <h1 id="about-me">About Me</h1>
+<h2 id="projects">Projects</h2>
+<p><strong>Home Lab</strong><br>
+<em>August 2025</em></p>
+<ul>
+<li>Deployed and configured OPNsense as the main router and firewall, setting up VLANs, appropriate subnets, DHCP, and firewall rules to segment and secure home lab traffic.</li>
+<li>Utilized Proxmox to host virtual machines for labs and services, learning virtualization, resource allocation, and snapshot management—accomplished utilizing LXC containers and KVM virtual machines.</li>
+<li>Created a SOC lab environment using Kali Linux for vulnerability assessment, a Windows target for exploitation, and a full Wazuh stack for real-time detection and prevention.</li>
+<li>Configured OPNsense firewalling with strict baselines—ensuring inter-VLAN traffic is within scope.</li>
+<li>Utilized WireGuard to secure sensitive traffic from self-hosted services to VPS proxy—terminated with TLS 1.2/1.3 certificates.</li>
+</ul>
+<p><img src="/images/smith-barlow-home-lab.webp" alt="Smith Barlow’s Home Lab Diagram"></p>
+<p><strong>VPS</strong><br>
+<em>August 2025</em></p>
+<ul>
+<li>Deployed a strict firewall policy: default-deny incoming, a strict UFW ruleset only allowing essential ports (non-standard IP-bound SSH port), with Tor service bound to localhost and isolated from public interfaces.</li>
+<li>Obtained an <a href="https://www.ssllabs.com/ssltest/analyze.html?d=smithbarlow.net">A+ SSL Labs Score</a>, configured Let&rsquo;s Encrypt TLS (TLS 1.2/1.3) with strong AEAD ciphers, implemented HSTS preload, instituted DNSSEC to prevent MITM attacks, and restrictive CAA policies to prevent rogue issuance.</li>
+<li>Secured Nginx with tight content security policies, method restrictions (GET/HEAD only), rate-limiting, appropriate header limits, and privacy-respecting security headers.</li>
+<li>Deployed kernel-level security via extensive sysctl settings, unused protocol and module blacklisting (modprobe blocklist), and AppArmor confinement for Nginx and Tor to limit post-exploit impact.</li>
+<li>Incorporated a strong chain of trust: a signed Tor mirror statement, mirrored public GPG keys, and SHA-512 checksum proofs—all implemented across DNS TXT records and a <a href="https://github.com/smithbarlow/smithbarlow.gpg">GitHub mirror</a>.</li>
+</ul>
+<h3 id="verification">Verification</h3>
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Web Hosting (Headers)</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">Clearnet: curl -vkI https://smithbarlow.net
+</span></span><span class="line"><span class="ln">3</span><span class="cl">Tor Mirror: curl -vkI <span class="o">(</span>WIP<span class="o">)</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="c1"># DNS</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">dig @9.9.9.9 smithbarlow.net any +dnssec
+</span></span><span class="line"><span class="ln">7</span><span class="cl">
+</span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="c1"># Documentation</span>
+</span></span><span class="line"><span class="ln">9</span><span class="cl">Write Up: https://github.com/smithbarlow/Home-Lab</span></span></code></pre></div><h2 id="events">Events</h2>
+<p><strong>Summer Cyber Tech Track</strong><br>
+<strong><em>Ken Garff Esports</em></strong><br>
+<em>July 2025</em></p>
+<ul>
+<li>Participated in the CyberPatriot Windows and Linux security competitions, identifying and fixing security vulnerabilities.</li>
+<li>Learned Linux fundamentals such as command-line navigation, file system structure, and user permissions—including SSH hardening, network hardening (ufw), and managing malicious system services (systemctl).</li>
+<li>Gained practical experience with Linux and Windows security concepts, such as: account management, patching, service auditing, basic firewall deployment, and intrusion prevention methodologies.</li>
+</ul>
+<h2 id="certifications">Certifications</h2>
+<ul>
+<li><a href="/files/CyberPatriot-Certificate-Smith-Barlow.pdf">CyberPatriot (AFA) - Standard AFA CyberCamp </a></li>
+</ul>
+<h2 id="education">Education</h2>
+<blockquote>
+<p><strong>High School Diploma</strong><br>
+August, 2025 - May, 2028</p></blockquote>
+
+</content>
+
+<p>
+  
+</p>
+
+
+  </main>
+  <footer><div id="foot-border"></div>
+<small id="foot">
+<a href="https://github.com/smithbarlow/smithbarlow.net">Copyright ©2025 Smith Barlow All Rights Reserved</a><br>
+<a href="https://smithbarlow.net">smithbarlow.net | </a>
+<a href="mailto:smithbarlow28@proton.me">smithbarlow28@proton.me</a>
+</small>
+</footer>
+
+    
+</body>
+
+</html>

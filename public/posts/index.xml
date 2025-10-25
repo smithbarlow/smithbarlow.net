@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on smithbarlow.xyz</title>
+    <link>https://smithbarlow.net/posts/</link>
+    <description>Recent content in Posts on smithbarlow.xyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <managingEditor>smithbarlow28@proton.me (Smith Barlow)</managingEditor>
+    <webMaster>smithbarlow28@proton.me (Smith Barlow)</webMaster>
+    <copyright>Copyright ©2025 Smith Barlow All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 24 Oct 2025 00:38:44 -0700</lastBuildDate>
+    <atom:link href="https://smithbarlow.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WPA2 Vulnerability Assessment</title>
+      <link>https://smithbarlow.net/posts/wpa2-vulnerability-assessment/</link>
+      <pubDate>Fri, 24 Oct 2025 16:36:37 -0600</pubDate><author>smithbarlow28@proton.me (Smith Barlow)</author>
+      <guid>https://smithbarlow.net/posts/wpa2-vulnerability-assessment/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+  </channel>
+</rss>

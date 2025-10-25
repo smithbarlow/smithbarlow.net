@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>smithbarlow.xyz</title>
+    <link>https://smithbarlow.net/</link>
+    <description>Recent content on smithbarlow.xyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <managingEditor>smithbarlow28@proton.me (Smith Barlow)</managingEditor>
+    <webMaster>smithbarlow28@proton.me (Smith Barlow)</webMaster>
+    <copyright>Copyright ©2025 Smith Barlow All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 24 Oct 2025 00:34:17 -0700</lastBuildDate>
+    <atom:link href="https://smithbarlow.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://smithbarlow.net/about/</link>
+      <pubDate>Fri, 24 Oct 2025 00:38:44 -0700</pubDate><author>smithbarlow28@proton.me (Smith Barlow)</author>
+      <guid>https://smithbarlow.net/about/</guid>
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;&#xA;&lt;h2 id=&#34;projects&#34;&gt;Projects&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Home Lab&lt;/strong&gt;&lt;br&gt;&#xA;&lt;em&gt;August 2025&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Deployed and configured OPNsense as the main router and firewall, setting up VLANs, appropriate subnets, DHCP, and firewall rules to segment and secure home lab traffic.&lt;/li&gt;&#xA;&lt;li&gt;Utilized Proxmox to host virtual machines for labs and services, learning virtualization, resource allocation, and snapshot management—accomplished utilizing LXC containers and KVM virtual machines.&lt;/li&gt;&#xA;&lt;li&gt;Created a SOC lab environment using Kali Linux for vulnerability assessment, a Windows target for exploitation, and a full Wazuh stack for real-time detection and prevention.&lt;/li&gt;&#xA;&lt;li&gt;Configured OPNsense firewalling with strict baselines—ensuring inter-VLAN traffic is within scope.&lt;/li&gt;&#xA;&lt;li&gt;Utilized WireGuard to secure sensitive traffic from self-hosted services to VPS proxy—terminated with TLS 1.2/1.3 certificates.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://smithbarlow.net/images/smith-barlow-home-lab.webp&#34; alt=&#34;Smith Barlow’s Home Lab Diagram&#34;&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<h1 id="about-me">About Me</h1>
+<h2 id="projects">Projects</h2>
+<p><strong>Home Lab</strong><br>
+<em>August 2025</em></p>
+<ul>
+<li>Deployed and configured OPNsense as the main router and firewall, setting up VLANs, appropriate subnets, DHCP, and firewall rules to segment and secure home lab traffic.</li>
+<li>Utilized Proxmox to host virtual machines for labs and services, learning virtualization, resource allocation, and snapshot management—accomplished utilizing LXC containers and KVM virtual machines.</li>
+<li>Created a SOC lab environment using Kali Linux for vulnerability assessment, a Windows target for exploitation, and a full Wazuh stack for real-time detection and prevention.</li>
+<li>Configured OPNsense firewalling with strict baselines—ensuring inter-VLAN traffic is within scope.</li>
+<li>Utilized WireGuard to secure sensitive traffic from self-hosted services to VPS proxy—terminated with TLS 1.2/1.3 certificates.</li>
+</ul>
+<p><img src="/images/smith-barlow-home-lab.webp" alt="Smith Barlow’s Home Lab Diagram"></p>
+<p><strong>VPS</strong><br>
+<em>August 2025</em></p>
+<ul>
+<li>Deployed a strict firewall policy: default-deny incoming, a strict UFW ruleset only allowing essential ports (non-standard IP-bound SSH port), with Tor service bound to localhost and isolated from public interfaces.</li>
+<li>Obtained an <a href="https://www.ssllabs.com/ssltest/analyze.html?d=smithbarlow.net">A+ SSL Labs Score</a>, configured Let&rsquo;s Encrypt TLS (TLS 1.2/1.3) with strong AEAD ciphers, implemented HSTS preload, instituted DNSSEC to prevent MITM attacks, and restrictive CAA policies to prevent rogue issuance.</li>
+<li>Secured Nginx with tight content security policies, method restrictions (GET/HEAD only), rate-limiting, appropriate header limits, and privacy-respecting security headers.</li>
+<li>Deployed kernel-level security via extensive sysctl settings, unused protocol and module blacklisting (modprobe blocklist), and AppArmor confinement for Nginx and Tor to limit post-exploit impact.</li>
+<li>Incorporated a strong chain of trust: a signed Tor mirror statement, mirrored public GPG keys, and SHA-512 checksum proofs—all implemented across DNS TXT records and a <a href="https://github.com/smithbarlow/smithbarlow.gpg">GitHub mirror</a>.</li>
+</ul>
+<h3 id="verification">Verification</h3>
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Web Hosting (Headers)</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">Clearnet: curl -vkI https://smithbarlow.net
+</span></span><span class="line"><span class="ln">3</span><span class="cl">Tor Mirror: curl -vkI <span class="o">(</span>WIP<span class="o">)</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="c1"># DNS</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">dig @9.9.9.9 smithbarlow.net any +dnssec
+</span></span><span class="line"><span class="ln">7</span><span class="cl">
+</span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="c1"># Documentation</span>
+</span></span><span class="line"><span class="ln">9</span><span class="cl">Write Up: https://github.com/smithbarlow/Home-Lab</span></span></code></pre></div><h2 id="events">Events</h2>
+<p><strong>Summer Cyber Tech Track</strong><br>
+<strong><em>Ken Garff Esports</em></strong><br>
+<em>July 2025</em></p>
+<ul>
+<li>Participated in the CyberPatriot Windows and Linux security competitions, identifying and fixing security vulnerabilities.</li>
+<li>Learned Linux fundamentals such as command-line navigation, file system structure, and user permissions—including SSH hardening, network hardening (ufw), and managing malicious system services (systemctl).</li>
+<li>Gained practical experience with Linux and Windows security concepts, such as: account management, patching, service auditing, basic firewall deployment, and intrusion prevention methodologies.</li>
+</ul>
+<h2 id="certifications">Certifications</h2>
+<ul>
+<li><a href="/files/CyberPatriot-Certificate-Smith-Barlow.pdf">CyberPatriot (AFA) - Standard AFA CyberCamp </a></li>
+</ul>
+<h2 id="education">Education</h2>
+<blockquote>
+<p><strong>High School Diploma</strong><br>
+August, 2025 - May, 2028</p></blockquote>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>https://smithbarlow.net/contact/</link>
+      <pubDate>Fri, 24 Oct 2025 00:38:44 -0700</pubDate><author>smithbarlow28@proton.me (Smith Barlow)</author>
+      <guid>https://smithbarlow.net/contact/</guid>
+      <description>&lt;h1 id=&#34;contact&#34;&gt;Contact&lt;/h1&gt;&#xA;&lt;p&gt;Socials: &lt;a href=&#34;https://github.com/smithbarlow&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;For professional opportunities, feel free to contact me via email: &lt;a href=&#34;mailto:smithbarlow28@proton.me&#34;&gt;smithbarlow28@proton.me&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://github.com/smithbarlow/smithbarlow.gpg&#xA;curl -sL https://smithbarlow.net/smithbarlow.gpg | gpg --import&#xA;&#xA;Fingerprint: C6A4 8319 50BF 042C 8AB2  EDD7 43D0 FB42 FE58 2CE5&#xA;-----BEGIN PGP PUBLIC KEY BLOCK-----&#xA;&#xA;mDMEaJFfOxYJKwYBBAHaRw8BAQdAMwj8uow25dVU7RVxsaTAYhcEj1AQGZpOvSL/&#xA;xukKNTe0JlNtaXRoIEJhcmxvdyA8c21pdGhiYXJsb3cyOEBwcm90b24ubWU+iJME&#xA;ExYKADsWIQTGpIMZUL8ELIqy7ddD0PtC/lgs5QUCaJFfOwIbAwULCQgHAgIiAgYV&#xA;CgkICwIEFgIDAQIeBwIXgAAKCRBD0PtC/lgs5SuBAP4opMArmseMtJlf/NDr9Ul7&#xA;Rk8sFYaykrWU9SLV8K+iwAEA5FukDoK2+6bhYO0JS05BudqlIleUlOYWf7CVanST&#xA;bQO4OARokV87EgorBgEEAZdVAQUBAQdA7g0e09zmF8MQZ4CpnZJPwUQ0gUfNdztZ&#xA;n/v8zTwPEncDAQgHiHgEGBYKACAWIQTGpIMZUL8ELIqy7ddD0PtC/lgs5QUCaJFf&#xA;OwIbDAAKCRBD0PtC/lgs5VQlAQD3DNyr8rBgADrr5WzTPZKdV54rTN1CI0DzcGCL&#xA;oq5xkQD/UXQSGULICp3gmHmCzMmfnrANNlqoilS/8SeygLhICgU=&#xA;=li+y&#xA;-----END PGP PUBLIC KEY BLOCK-----&lt;/code&gt;&lt;/pre&gt;</description>
+      <content:encoded><![CDATA[<h1 id="contact">Contact</h1>
+<p>Socials: <a href="https://github.com/smithbarlow">GitHub</a></p>
+<p>For professional opportunities, feel free to contact me via email: <a href="mailto:smithbarlow28@proton.me">smithbarlow28@proton.me</a></p>
+
+
+
+
+
+<pre tabindex="0"><code>https://github.com/smithbarlow/smithbarlow.gpg
+curl -sL https://smithbarlow.net/smithbarlow.gpg | gpg --import
+
+Fingerprint: C6A4 8319 50BF 042C 8AB2  EDD7 43D0 FB42 FE58 2CE5
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEaJFfOxYJKwYBBAHaRw8BAQdAMwj8uow25dVU7RVxsaTAYhcEj1AQGZpOvSL/
+xukKNTe0JlNtaXRoIEJhcmxvdyA8c21pdGhiYXJsb3cyOEBwcm90b24ubWU+iJME
+ExYKADsWIQTGpIMZUL8ELIqy7ddD0PtC/lgs5QUCaJFfOwIbAwULCQgHAgIiAgYV
+CgkICwIEFgIDAQIeBwIXgAAKCRBD0PtC/lgs5SuBAP4opMArmseMtJlf/NDr9Ul7
+Rk8sFYaykrWU9SLV8K+iwAEA5FukDoK2+6bhYO0JS05BudqlIleUlOYWf7CVanST
+bQO4OARokV87EgorBgEEAZdVAQUBAQdA7g0e09zmF8MQZ4CpnZJPwUQ0gUfNdztZ
+n/v8zTwPEncDAQgHiHgEGBYKACAWIQTGpIMZUL8ELIqy7ddD0PtC/lgs5QUCaJFf
+OwIbDAAKCRBD0PtC/lgs5VQlAQD3DNyr8rBgADrr5WzTPZKdV54rTN1CI0DzcGCL
+oq5xkQD/UXQSGULICp3gmHmCzMmfnrANNlqoilS/8SeygLhICgU=
+=li+y
+-----END PGP PUBLIC KEY BLOCK-----</code></pre>]]></content:encoded>
+    </item>
+    <item>
+      <title>Services</title>
+      <link>https://smithbarlow.net/services/</link>
+      <pubDate>Fri, 24 Oct 2025 00:38:44 -0700</pubDate><author>smithbarlow28@proton.me (Smith Barlow)</author>
+      <guid>https://smithbarlow.net/services/</guid>
+      <description>&lt;h1 id=&#34;self-hosted-services&#34;&gt;Self-Hosted Services&lt;/h1&gt;&#xA;&lt;div class=&#34;services&#34;&gt;&#xA;        &lt;div class=&#34;service&#34;&gt;&#xA;          &lt;div class=&#34;service-icon&#34;&gt;&#xA;            &lt;img src=&#34;https://smithbarlow.net/images/papermc.webp&#34; alt=&#34;PaperMC&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;&gt;&#xA;          &lt;/div&gt;&#xA;&#xA;          &lt;div class=&#34;service-body&#34;&gt;&#xA;            &lt;h3 class=&#34;service-title&#34;&gt;PaperMC&lt;/h3&gt;&#xA;            &lt;div class=&#34;service-text&#34;&gt;Lightweight Bukkit/Spigot-compatible vanilla Minecraft server.&lt;/div&gt;&#xA;              &lt;div class=&#34;service-links&#34;&gt;&lt;a href=&#34;mailto:smithbarlow28@proton.me&#34;&gt;mc.smithbarlow.xyz&lt;/a&gt;&#xA;              &lt;/div&gt;&#xA;          &lt;/div&gt;&#xA;        &lt;/div&gt;&#xA;&lt;/div&gt;</description>
+      <content:encoded><![CDATA[<h1 id="self-hosted-services">Self-Hosted Services</h1>
+<div class="services">
+        <div class="service">
+          <div class="service-icon">
+            <img src="/images/papermc.webp" alt="PaperMC" loading="lazy" decoding="async">
+          </div>
+
+          <div class="service-body">
+            <h3 class="service-title">PaperMC</h3>
+            <div class="service-text">Lightweight Bukkit/Spigot-compatible vanilla Minecraft server.</div>
+              <div class="service-links"><a href="mailto:smithbarlow28@proton.me">mc.smithbarlow.xyz</a>
+              </div>
+          </div>
+        </div>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>WPA2 Vulnerability Assessment</title>
+      <link>https://smithbarlow.net/posts/wpa2-vulnerability-assessment/</link>
+      <pubDate>Fri, 24 Oct 2025 16:36:37 -0600</pubDate><author>smithbarlow28@proton.me (Smith Barlow)</author>
+      <guid>https://smithbarlow.net/posts/wpa2-vulnerability-assessment/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+  </channel>
+</rss>
