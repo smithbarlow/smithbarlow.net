@@ -23,7 +23,7 @@ enableRobotsTXT = true
 # see https://gohugo.io/content-management/multilingual/
 [languages]
   [languages.en]
-    title = "smithbarlow.xyz"
+    title = "smithbarlow.net"
     languageName = "en-US 🇺🇸"
     LanguageCode = "en-US"
     contentDir = "content"
