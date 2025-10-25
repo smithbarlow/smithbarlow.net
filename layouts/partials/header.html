@@ -1,0 +1,21 @@
+<div class="brand">
+  <a class="title" href="{{ relURL .Site.Home.RelPermalink }}">
+    <div id="logo" aria-hidden="true"></div>
+    <h1 class="site-title">{{ .Site.Title }}</h1>
+  </a>
+</div>
+
+{{ $here := .RelPermalink }}
+{{ if ne $here "/" }}
+  {{ $segs := split (trim $here "/") "/" }}
+  {{ $n := len $segs }}
+  {{ $back := "/" }}
+
+  {{ if gt $n 1 }}
+    {{ $back = printf "/%s/" (delimit (first (sub $n 1) $segs) "/") }}
+  {{ end }}
+
+  <a href="{{ $back | absURL }}">..</a>
+{{ end }}
+
+<nav>{{ partial "nav.html" . }}</nav>
