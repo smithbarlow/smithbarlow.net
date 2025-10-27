@@ -10,7 +10,7 @@ description = "Smith Barlow's Home Page"
 
 ## Welcome to My Blog!
 
-I am Smith Barlow—__*a highly eager and driven school student*__.\
+I am Smith Barlow—__*a highly eager and driven high school student*__.\
 This blog serves as my personal portfolio and is intended to highlight my:
 
 - Projects 
