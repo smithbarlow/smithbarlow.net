@@ -28,6 +28,7 @@ This blog serves as my personal portfolio and is intended to highlight my:
 - [About](/about)
 - [Contact](/contact)
 - [Services](/services)
+- [Checksums](/SHA512-hashes.txt)
 - [Privacy Policy](/privacy-policy.txt)
 - [Mirror Statement](/tor-mirror-statement.txt)
 - [RSS](/index.xml)
