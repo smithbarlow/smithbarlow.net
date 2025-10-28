@@ -10,5 +10,5 @@ description = "Smith Barlow's Services Page"
 # Self-Hosted Services
 
 {{< services >}}
-/images/papermc.webp|PaperMC|Lightweight Bukkit/Spigot-compatible vanilla Minecraft server.|mc.smithbarlow.xyz::mailto:smithbarlow28@proton.me
+/images/papermc.webp|PaperMC|Lightweight Bukkit/Spigot-compatible vanilla Minecraft server.|mc.smithbarlow.net::mailto:smithbarlow28@proton.me
 {{< /services >}}

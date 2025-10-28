@@ -109,7 +109,7 @@ gryEx4MSG7pv+SA5sxgA
       <link>https://smithbarlow.net/services/</link>
       <pubDate>Fri, 24 Oct 2025 00:38:44 -0700</pubDate><author>smithbarlow28@proton.me (Smith Barlow)</author>
       <guid>https://smithbarlow.net/services/</guid>
-      <description>&lt;h1 id=&#34;self-hosted-services&#34;&gt;Self-Hosted Services&lt;/h1&gt;&#xA;&lt;div class=&#34;services&#34;&gt;&#xA;        &lt;div class=&#34;service&#34;&gt;&#xA;          &lt;div class=&#34;service-icon&#34;&gt;&#xA;            &lt;img src=&#34;https://smithbarlow.net/images/papermc.webp&#34; alt=&#34;PaperMC&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;&gt;&#xA;          &lt;/div&gt;&#xA;&#xA;          &lt;div class=&#34;service-body&#34;&gt;&#xA;            &lt;h3 class=&#34;service-title&#34;&gt;PaperMC&lt;/h3&gt;&#xA;            &lt;div class=&#34;service-text&#34;&gt;Lightweight Bukkit/Spigot-compatible vanilla Minecraft server.&lt;/div&gt;&#xA;              &lt;div class=&#34;service-links&#34;&gt;&lt;a href=&#34;mailto:smithbarlow28@proton.me&#34;&gt;mc.smithbarlow.xyz&lt;/a&gt;&#xA;              &lt;/div&gt;&#xA;          &lt;/div&gt;&#xA;        &lt;/div&gt;&#xA;&lt;/div&gt;</description>
+      <description>&lt;h1 id=&#34;self-hosted-services&#34;&gt;Self-Hosted Services&lt;/h1&gt;&#xA;&lt;div class=&#34;services&#34;&gt;&#xA;        &lt;div class=&#34;service&#34;&gt;&#xA;          &lt;div class=&#34;service-icon&#34;&gt;&#xA;            &lt;img src=&#34;https://smithbarlow.net/images/papermc.webp&#34; alt=&#34;PaperMC&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;&gt;&#xA;          &lt;/div&gt;&#xA;&#xA;          &lt;div class=&#34;service-body&#34;&gt;&#xA;            &lt;h3 class=&#34;service-title&#34;&gt;PaperMC&lt;/h3&gt;&#xA;            &lt;div class=&#34;service-text&#34;&gt;Lightweight Bukkit/Spigot-compatible vanilla Minecraft server.&lt;/div&gt;&#xA;              &lt;div class=&#34;service-links&#34;&gt;&lt;a href=&#34;mailto:smithbarlow28@proton.me&#34;&gt;mc.smithbarlow.net&lt;/a&gt;&#xA;              &lt;/div&gt;&#xA;          &lt;/div&gt;&#xA;        &lt;/div&gt;&#xA;&lt;/div&gt;</description>
       <content:encoded><![CDATA[<h1 id="self-hosted-services">Self-Hosted Services</h1>
 <div class="services">
         <div class="service">
@@ -120,7 +120,7 @@ gryEx4MSG7pv+SA5sxgA
           <div class="service-body">
             <h3 class="service-title">PaperMC</h3>
             <div class="service-text">Lightweight Bukkit/Spigot-compatible vanilla Minecraft server.</div>
-              <div class="service-links"><a href="mailto:smithbarlow28@proton.me">mc.smithbarlow.xyz</a>
+              <div class="service-links"><a href="mailto:smithbarlow28@proton.me">mc.smithbarlow.net</a>
               </div>
           </div>
         </div>
